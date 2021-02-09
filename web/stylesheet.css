@@ -1,12 +1,106 @@
-.wrapper {
+/* .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
     grid-auto-rows: minmax(400px, auto);
-  }
-  .card {
+  } */
+  /* .card {
       display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr, 5fr;
         background-color: aquamarine;
+  } */
+.pokemon-card-container{
+  background-color: red;
+  border: 2px solid black;
+  height:300px;
+  width: 250px;
+  margin: 2%;
+}
+  .background{
+   
+    background: linear-gradient(to right,yellow, white)
   }
+  .image {
+    margin-top: 70px;
+    margin-left: 40px;
+    width:150px;
+    height:150px;
+    position:absolute;
+    background-color: red;
+    
+  }
+  .top-left {
+    position: absolute;
+    top: 90px;
+    left: 60px;
+  }
+  .top-right {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+  }
+  
+
+  .pokemon-card-container2{
+    background-color: grey;
+    border: 2px solid black;
+    height:300px;
+    width: 250px;
+    margin: 2%;
+  }
+    .background2{
+     
+      background: linear-gradient(to right,yellow, white)
+    }
+    .image2 {
+      margin-top: 70px;
+      margin-left: 40px;
+      width:150px;
+      height:150px;
+      position:absolute;
+      background-color: grey;
+      
+    }
+    .top-left2 {
+      position: absolute;
+      top: 430px;
+      left: 60px;
+    }
+    .top-right2 {
+      position: absolute;
+      top:430px;
+      left: 170px;
+    }
+
+    
+  .pokemon-card-container3{
+    background-color: brown;
+    border: 2px solid black;
+    height:300px;
+    width: 250px;
+    margin: 2%;
+  }
+    .background3{
+     
+      background: linear-gradient(to right,yellow, white)
+    }
+    .image3 {
+      margin-top: 70px;
+      margin-left: 40px;
+      width:150px;
+      height:150px;
+      position:absolute;
+      background-color: brown;
+      
+    }
+    .top-left3 {
+      position: absolute;
+      top: 765px;
+      left: 60px;
+    }
+    .top-right3 {
+      position: absolute;
+      top:765px;
+      left: 170px;
+    }
