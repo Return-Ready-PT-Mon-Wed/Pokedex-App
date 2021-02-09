@@ -10,24 +10,40 @@
         grid-template-rows: 1fr, 5fr;
         background-color: aquamarine;
   } */
-.pokemon-card-container{
-  background-color: red;
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+  .pokemon-card-container{
+
+    display: grid | inline-grid;
+    grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  column-gap: 10px;
+  row-gap: 15px;
+    
+}
+
+
+.pokemon-card{
+  background-color: yellow;
   border: 2px solid black;
   height:300px;
   width: 250px;
   margin: 2%;
+  
 }
-  .background{
-   
-    background: linear-gradient(to right,yellow, white)
-  }
+  
   .image {
     margin-top: 70px;
     margin-left: 40px;
     width:150px;
     height:150px;
     position:absolute;
-    background-color: red;
+    background-color: yellow;
     
   }
   .top-left {
@@ -43,7 +59,7 @@
   
 
   .pokemon-card-container2{
-    background-color: grey;
+    background-color: yellow;
     border: 2px solid black;
     height:300px;
     width: 250px;
@@ -59,7 +75,7 @@
       width:150px;
       height:150px;
       position:absolute;
-      background-color: grey;
+      background-color: yellow;
       
     }
     .top-left2 {
@@ -104,3 +120,34 @@
       top:765px;
       left: 170px;
     }
+
+
+
+    .pokemon-card4{
+      background-color: yellow;
+      border: 2px solid black;
+      height:300px;
+      width: 250px;
+      margin: 2%;
+      
+    }
+      
+      .image4 {
+        margin-top: 70px;
+        margin-left: 40px;
+        width:150px;
+        height:150px;
+        position:absolute;
+        background-color: yellow;
+        
+      }
+      .top-left4 {
+        position: absolute;
+        top: 1100px;
+        left: 60px;
+      }
+      .top-right4 {
+        position: absolute;
+        top: 1100px;
+        left: 170px;
+      }
