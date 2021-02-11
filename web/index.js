@@ -1,11 +1,7 @@
-const localhost = "http://localhost:3000/pokemon/search";
-const btn = document.querySelector(".btn");
+const localhost = "http://localhost:5000/pokemon/";
 
-//On Click function
-async function searchPoke() {
+async function allPoke() {
   const response = await fetch(localhost);
   const json = await response.json();
-  console.log(json.data);
+  console.log(json.name);
 }
-
-btn.addEventListener("click", searchPoke);
