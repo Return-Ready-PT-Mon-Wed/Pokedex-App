@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon Database</title>
+    <link rel="shortcut icon" type="image/png" href="../imgs/pikaFav.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
-<body>
-    <p>Hello Pokemon!</p>
+
+<body onload="GetAllPokemon()">
+
+    <div class="container">
+
+        <header>
+            <h1>Pokemon Index</h1>
+        </header>
+
+        <main>
+            <div style="padding-bottom: 1em;">
+                <label>Name/ ID:</label>
+                <input type="text" name="pokemonId" id="pokemonId">
+                <button type="submit" onclick="updatePokemon()">View Pokemon</button>
+                <button type="submit" onclick="clearPokemon()">Clear Pokemon</button>
+            </div>
+            </br>
+            <div id="main">
+                
+            </div>
+        </main>
+
+        <div id="fullIndex">
+
+
+        </div>
+
+    </div>
+
+    <script src="../pokemon.js"></script>
+
 </body>
+
 </html>
