@@ -1,57 +1,42 @@
-// const express = require('express');
-// const app = express();
-// const port = 3000;
+// const express = require('express')
+// const app = express()
+// const port = 3000
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
 
 // app.listen(port, () => {
 //   console.log(`Example app listening at http://localhost:${port}`)
 // })
 
-let pokedex = document.getElementById("pokedex");
-console.log(pokedex);
-let url = "https://pokeapi.co/api/v2/pokemon/";
-let fetchPokemon = () => {
-  const promises = [];
-  for (let i = 1; i <= 898; i++) {
-    console.log(url + i);
-    promises.push(fetch(url + i).then((res) => res.json()));
-  }
-  Promise.all(promises).then(results => {
-    const pokemon = results.map((data) => ({
-      name: data.name,
-      id: data.id,
-      image: data.sprites['front_shiny'],
-      type: data.types.map((type) => type.type.name).join(',')
-    }));
-    displayPokemon(pokemon);
-    
-  });
-    
+const pokedex = document.getElementById("pokedex");
+
+const fetchPokemon = () => {
+    const promises = [];
+    for (let i =+1; i <=  898; i++) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        promises.push(fetch(url).then((res) => res.json()));
+    }
+    Promise.all(promises).then((results) => {
+        const pokemon = results.map((poke) => ({
+            name: poke.name,
+            id: poke.id,
+            image: poke.sprites['front_default'],
+            type: poke.types.map((type) => type.type.name).join(', ')
+        })); 
+        displayPokemon(pokemon);
+   });
 };
-
-
-let displayPokemon = (pokemon) => {
-  console.log(pokemon);
-  const pokemonHTMLString = pokemon.map(
-    (pokeman) => `
-          <li class = "card">
-                <img src= "${pokeman.image}" />
-                <h2> ${pokeman.id}. ${pokeman.name}</h2>
-                <p>Type: ${pokeman.type}</p>
-           </li>
-      `).join('');
-  pokedex.innerHTML = pokemonHTMLString;
-  return cardColor();
-
-};
-
-function cardColor(){
-  if (pokeman.type === 'grass') {
-    document.getElementsByClassName("card")[0].style.backgroundColor="blue";
-  }
+const displayPokemon = (pokemon) => {
+    console.log(pokemon);
+    const pokemonHTMLString = pokemon.map((pokeman) => `
+        <li class="card">
+            <img class="card-image" src="${pokeman.image}"/>
+            <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
+            <p class="card-subtitle">Type: ${pokeman.type}</p>
+        </li>
+    `
+        )
+        .join('');
+    pokedex.innerHTML = pokemonHTMLString;
 };
 
 fetchPokemon();
