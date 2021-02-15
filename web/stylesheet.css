@@ -1,153 +1,86 @@
-/* .wrapper {
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
     gap: 100px;
     grid-auto-rows: minmax(400px, auto);
-  } */
-  /* .card {
-      display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr, 5fr;
-        background-color: aquamarine;
-  } */
-
-
-*{
-  box-sizing: border-box;
+  }
+  .card {
+      
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        min-width: 30;
+  }
+img{
+  margin: auto;
 }
+ .idTypeDiv{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
+ }
+  .backround__red {
+    background-color: red;
+  }
 
-
-  .pokemon-card-container{
-
-    display: grid | inline-grid;
-    grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px; 
-  column-gap: 10px;
-  row-gap: 15px;
-    
+  /* pokemon type colors */
+.normal {
+  background-color: #9a9e80;
 }
-
-
-.pokemon-card{
-  background-color: yellow;
-  border: 2px solid black;
-  height:300px;
-  width: 250px;
-  margin: 2%;
-  
+.fire {
+  background-color: #e98729 ;
 }
-  
-  .image {
-    margin-top: 70px;
-    margin-left: 40px;
-    width:150px;
-    height:150px;
-    position:absolute;
-    background-color: yellow;
-    
-  }
-  .top-left {
-    position: absolute;
-    top: 90px;
-    left: 60px;
-  }
-  .top-right {
-    position: absolute;
-    top: 90px;
-    left: 170px;
-  }
-  
-
-  .pokemon-card-container2{
-    background-color: yellow;
-    border: 2px solid black;
-    height:300px;
-    width: 250px;
-    margin: 2%;
-  }
-    .background2{
-     
-      background: linear-gradient(to right,yellow, white)
-    }
-    .image2 {
-      margin-top: 70px;
-      margin-left: 40px;
-      width:150px;
-      height:150px;
-      position:absolute;
-      background-color: yellow;
-      
-    }
-    .top-left2 {
-      position: absolute;
-      top: 430px;
-      left: 60px;
-    }
-    .top-right2 {
-      position: absolute;
-      top:430px;
-      left: 170px;
-    }
-
-    
-  .pokemon-card-container3{
-    background-color: brown;
-    border: 2px solid black;
-    height:300px;
-    width: 250px;
-    margin: 2%;
-  }
-    .background3{
-     
-      background: linear-gradient(to right,yellow, white)
-    }
-    .image3 {
-      margin-top: 70px;
-      margin-left: 40px;
-      width:150px;
-      height:150px;
-      position:absolute;
-      background-color: brown;
-      
-    }
-    .top-left3 {
-      position: absolute;
-      top: 765px;
-      left: 60px;
-    }
-    .top-right3 {
-      position: absolute;
-      top:765px;
-      left: 170px;
-    }
-
-
-
-    .pokemon-card4{
-      background-color: yellow;
-      border: 2px solid black;
-      height:300px;
-      width: 250px;
-      margin: 2%;
-      
-    }
-      
-      .image4 {
-        margin-top: 70px;
-        margin-left: 40px;
-        width:150px;
-        height:150px;
-        position:absolute;
-        background-color: yellow;
-        
-      }
-      .top-left4 {
-        position: absolute;
-        top: 1100px;
-        left: 60px;
-      }
-      .top-right4 {
-        position: absolute;
-        top: 1100px;
-        left: 170px;
-      }
+.fighting {
+  background-color: #c92112;
+}
+.water {
+  background-color: #7891eb;
+}
+.flying {
+  background-color: #b39ad8;
+}
+.grass {
+  background-color: #82d979;
+}
+.poison {
+  background-color: #ad3da4;
+}
+.electric {
+  background-color: #ffec52;
+}
+.ground {
+  background-color: #e5ce75;
+}
+.psychic {
+  background-color: #f54878;
+}
+.rock {
+  background-color: #b4964e;
+}
+.ice {
+  background-color: #afe6df;
+}
+.bug {
+  background-color: #c1d69a;
+}
+.dragon {
+  background-color: #5a49ff;
+}
+.ghost {
+  background-color: #6d529a;
+}
+.dark {
+  background-color: #634f38;
+}
+.steel {
+  background-color: #bab3c9;
+}
+.fairy {
+  background-color: #f7abcc;
+}
