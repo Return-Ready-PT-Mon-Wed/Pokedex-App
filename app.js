@@ -4,7 +4,8 @@ const cors = require("cors"); // add cors
 //const path = require("path");
 //const web = path.join(__dirname, "web");
 const fetch = require("node-fetch"); // npm install node-fetch
-const port = 4000;
+const { default: axios } = require("axios");
+const port = 5000;
 //const jsdom = require("jsdom");
 //const { JSDOM } = jsdom;
 
@@ -19,7 +20,9 @@ app.use(cors());
 
 app.get("/Pokemon/:id", async (req, res) => {
   let pokeNum = req.params.id;
-  let pokeResp = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNum}`);
+  let pokeResp = await axios.get(
+    `https://pokeapi.co/api/v2/pokemon/${pokeNum}`
+  );
   res.send(pokeResp.data);
 });
 
